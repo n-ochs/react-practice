@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomepageContent from './components/homepageContent'
+import HomepageContent from './components/homepageContent';
+import Feed from './components/Feed';
+import FAQ from './components/FAQ';
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,6 +20,15 @@ function App() {
         <Switch>
           <Route exact path="/">
             <HomepageContent />
+          </Route>
+          <Route path="/faq">
+            <FAQ />
+          </Route>
+          <Route path="/feed">
+            <Feed />
+          </Route>
+          <Route path="*">
+            <h1>404 not found</h1>
           </Route>
         </Switch>
         <Footer />
